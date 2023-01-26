@@ -23,14 +23,14 @@ function addNewEvent(rowId , rowTime , rowColor){
 };
 
 for (let i = 9; i <= 17; i++) {
-    const date = moment().set({ hour: i, minute: 0 }).format('h A');
+    const date = moment().set({ hour: i, minute: 0 }).format("h A");
     let color = "";
 
-    if (time === date) {
+    if (date == time) {
         color = "present";        
-    }else if(time > date){
+    }else if(date > time){
         color = "future";
-    }else if(time < date){
+    }else if(date < time){
         color = "past";
     }
 
@@ -48,6 +48,3 @@ function saveInput(event) {
 
 saveBtn.addEventListener('click', saveInput);
 
-echo 'First line.
-Second line.
-Third line.' >foo.txt
